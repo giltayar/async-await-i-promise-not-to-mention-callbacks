@@ -1,4 +1,3 @@
-const {promisify: p} = require('util')
 const fetch = require('node-fetch')
 
 async function fetchDollarRate (date, symbol) {
