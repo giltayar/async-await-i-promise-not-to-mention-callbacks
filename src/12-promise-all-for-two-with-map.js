@@ -1,5 +1,4 @@
 const fetch = require('node-fetch')
-const sparkly = require('./sparkly')
 
 async function fetchDollarRate (date, symbol) {
   const response = await fetch(`https://api.fixer.io/${date}?base=USD&symbols=${symbol}`)
@@ -12,17 +11,11 @@ async function fetchDollarRate (date, symbol) {
 }
 
 async function main () {
-  const ratePromises = []
-  for (let i = 1; i < 10; ++i) {
-    ratePromises.push(fetchDollarRate(`2017-12-0${i}`, 'ILS'))
-  }
+  const [ilsRate, eurRate] = await Promise.all(
+    ['ILS', 'EUR']
+      .map(symbol => fetchDollarRate('2017-12-22', symbol)))
 
-  const rates = []
-  for (let i = 0; i < ratePromises.length; ++i) {
-    rates.push(await ratePromises[i])
-  }
-
-  console.log(sparkly(rates))
+  console.log(ilsRate, eurRate)
 }
 
 main()

@@ -49,4 +49,12 @@ describe('example programs', function () {
   it('10-promise-all-shorter', async () => {
     expect((await p(execFile)('node', ['src/10-promise-all-shorter.js'])).stdout.trim()).to.equal('▁▁▁▂▂▇')
   })
+
+  it('11-promise-all-for-two', async () => {
+    expect((await p(execFile)('node', ['src/11-promise-all-for-two.js'])).stdout.trim()).to.equal('3.4906 0.84324')
+  })
+
+  it('12-promise-all-for-two-with-map', async () => {
+    expect((await p(execFile)('node', ['src/12-promise-all-for-two-with-map.js'])).stdout.trim()).to.equal('3.4906 0.84324')
+  })
 })
