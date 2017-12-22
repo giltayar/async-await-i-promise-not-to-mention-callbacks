@@ -9,7 +9,20 @@ describe('example programs', function () {
     expect((await p(execFile)('node', ['src/01-async.js'])).stdout.trim()).to.equal('3.4906')
   })
 
-  it('01-async-function', async () => {
+  it('02-async-function', async () => {
     expect((await p(execFile)('node', ['src/02-async-function.js'])).stdout.trim()).to.equal('3.4906')
+  })
+
+  it('03-async-function-err', async () => {
+    const result = await p(execFile)('node', ['src/03-async-function-err.js']).catch(err => err)
+
+    expect(result.stderr).to.include('getaddrinfo ENOTFOUND api.fixer.io-error')
+    expect(result.code).to.equal(1)
+  })
+
+  it('04-impatience', async () => {
+    const result = await p(execFile)('node', ['src/04-impatience.js']).catch(err => err)
+
+    expect(result.stderr).to.include('Error: failed request')
   })
 })
