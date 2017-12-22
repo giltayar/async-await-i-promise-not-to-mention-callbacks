@@ -8,4 +8,8 @@ describe('example programs', function () {
   it('01-async', async () => {
     expect((await p(execFile)('node', ['src/01-async.js'])).stdout.trim()).to.equal('3.4906')
   })
+
+  it('01-async-function', async () => {
+    expect((await p(execFile)('node', ['src/02-async-function.js'])).stdout.trim()).to.equal('3.4906')
+  })
 })

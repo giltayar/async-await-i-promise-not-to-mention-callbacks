@@ -5,7 +5,8 @@
   "description": "Companion code to \"Async/Await: I Promise Not To Mention Callbacks\"",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --no-timeouts"
+    "test": "mocha --no-timeouts && npm run lint",
+    "lint": "eslint '**/*.js'"
   },
   "repository": {
     "type": "git",
