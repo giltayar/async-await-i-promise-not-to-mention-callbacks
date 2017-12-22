@@ -1,0 +1,34 @@
+{
+  "name": "async-await-i-promise-not-to-mention-callbacks",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Companion code to \"Async/Await: I Promise Not To Mention Callbacks\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --no-timeouts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giltayar/async-await-i-promise-not-to-mention-callbacks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/giltayar/async-await-i-promise-not-to-mention-callbacks/issues"
+  },
+  "homepage": "https://github.com/giltayar/async-await-i-promise-not-to-mention-callbacks#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.13.1",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^4.0.1"
+  },
+  "dependencies": {
+    "node-fetch": "^1.7.3"
+  }
+}
