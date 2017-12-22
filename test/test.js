@@ -33,4 +33,20 @@ describe('example programs', function () {
   it('06-concurrency', async () => {
     expect((await p(execFile)('node', ['src/06-concurrency.js'])).stdout.trim()).to.equal('3.4906 0.84324')
   })
+
+  it('07-promise-array', async () => {
+    expect((await p(execFile)('node', ['src/07-promise-array.js'])).stdout.trim()).to.equal('▁▁▁▂▂▇')
+  })
+
+  it('08-promise-all', async () => {
+    expect((await p(execFile)('node', ['src/08-promise-all.js'])).stdout.trim()).to.equal('▁▁▁▂▂▇')
+  })
+
+  it('09-promise-all-short', async () => {
+    expect((await p(execFile)('node', ['src/09-promise-all-short.js'])).stdout.trim()).to.equal('▁▁▁▂▂▇')
+  })
+
+  it('10-promise-all-shorter', async () => {
+    expect((await p(execFile)('node', ['src/10-promise-all-shorter.js'])).stdout.trim()).to.equal('▁▁▁▂▂▇')
+  })
 })

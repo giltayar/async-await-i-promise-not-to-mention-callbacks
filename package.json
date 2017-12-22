@@ -30,6 +30,7 @@
     "mocha": "^4.0.1"
   },
   "dependencies": {
+    "ansi-256-colors": "^1.1.0",
     "node-fetch": "^1.7.3"
   }
 }
