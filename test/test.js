@@ -5,6 +5,8 @@ const {describe, it} = require('mocha')
 const {expect} = require('chai')
 
 describe('example programs', function () {
+  this.retries(3)
+
   it('01-async', async () => {
     expect((await p(execFile)('node', ['src/01-async.js'])).stdout.trim()).to.equal('3.4906')
   })
@@ -56,5 +58,9 @@ describe('example programs', function () {
 
   it('12-promise-all-for-two-with-map', async () => {
     expect((await p(execFile)('node', ['src/12-promise-all-for-two-with-map.js'])).stdout.trim()).to.equal('3.4906 0.84324')
+  })
+
+  it('13-promise-race', async () => {
+    expect((await p(execFile)('node', ['src/13-promise-race.js'])).stdout.trim()).to.equal('undefined 3.4906')
   })
 })
