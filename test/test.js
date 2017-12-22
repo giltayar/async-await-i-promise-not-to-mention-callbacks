@@ -25,4 +25,12 @@ describe('example programs', function () {
 
     expect(result.stderr).to.include('Error: failed request')
   })
+
+  it('05-no-concurrency', async () => {
+    expect((await p(execFile)('node', ['src/05-no-concurrency.js'])).stdout.trim()).to.equal('3.4906 0.84324')
+  })
+
+  it('06-concurrency', async () => {
+    expect((await p(execFile)('node', ['src/06-concurrency.js'])).stdout.trim()).to.equal('3.4906 0.84324')
+  })
 })
