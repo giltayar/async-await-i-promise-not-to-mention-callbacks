@@ -1,7 +1,7 @@
 const fetch = require('node-fetch')
 
 async function main () {
-  const response = fetch('https://api.fixer.io/2017-12-22?base=USD&symbols=ILS')
+  const response = fetch('https://api.fixer.io/2017-12-20?base=USD&symbols=ILS')
 
   if (!response.ok) throw new Error('failed request')
 

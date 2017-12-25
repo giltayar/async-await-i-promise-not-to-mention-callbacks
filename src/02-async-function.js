@@ -11,7 +11,7 @@ async function fetchDollarRate (date, symbol) {
 }
 
 async function main () {
-  console.log(await fetchDollarRate('2017-12-22', 'ILS'))
+  console.log(await fetchDollarRate('2017-12-20', 'ILS'))
 }
 
 main()

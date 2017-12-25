@@ -13,7 +13,7 @@ async function fetchDollarRate (date, symbol) {
 async function main () {
   const [ilsRate, eurRate] = await Promise.all(
     ['ILS', 'EUR']
-      .map(symbol => fetchDollarRate('2017-12-22', symbol)))
+      .map(symbol => fetchDollarRate('2017-12-20', symbol)))
 
   console.log(ilsRate, eurRate)
 }

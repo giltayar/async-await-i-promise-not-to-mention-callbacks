@@ -8,11 +8,11 @@ describe('example programs', function () {
   this.retries(3)
 
   it('01-async', async () => {
-    expect((await p(execFile)('node', ['src/01-async.js'])).stdout.trim()).to.equal('3.4906')
+    expect((await p(execFile)('node', ['src/01-async.js'])).stdout.trim()).to.equal('3.495')
   })
 
   it('02-async-function', async () => {
-    expect((await p(execFile)('node', ['src/02-async-function.js'])).stdout.trim()).to.equal('3.4906')
+    expect((await p(execFile)('node', ['src/02-async-function.js'])).stdout.trim()).to.equal('3.495')
   })
 
   it('03-async-function-err', async () => {
@@ -29,11 +29,11 @@ describe('example programs', function () {
   })
 
   it('05-no-concurrency', async () => {
-    expect((await p(execFile)('node', ['src/05-no-concurrency.js'])).stdout.trim()).to.equal('3.4906 0.84324')
+    expect((await p(execFile)('node', ['src/05-no-concurrency.js'])).stdout.trim()).to.equal('3.495 0.84424')
   })
 
   it('06-concurrency', async () => {
-    expect((await p(execFile)('node', ['src/06-concurrency.js'])).stdout.trim()).to.equal('3.4906 0.84324')
+    expect((await p(execFile)('node', ['src/06-concurrency.js'])).stdout.trim()).to.equal('3.495 0.84424')
   })
 
   it('07-promise-array', async () => {
@@ -53,14 +53,22 @@ describe('example programs', function () {
   })
 
   it('11-promise-all-for-two', async () => {
-    expect((await p(execFile)('node', ['src/11-promise-all-for-two.js'])).stdout.trim()).to.equal('3.4906 0.84324')
+    expect((await p(execFile)('node', ['src/11-promise-all-for-two.js'])).stdout.trim()).to.equal('3.495 0.84424')
   })
 
   it('12-promise-all-for-two-with-map', async () => {
-    expect((await p(execFile)('node', ['src/12-promise-all-for-two-with-map.js'])).stdout.trim()).to.equal('3.4906 0.84324')
+    expect((await p(execFile)('node', ['src/12-promise-all-for-two-with-map.js'])).stdout.trim()).to.equal('3.495 0.84424')
   })
 
   it('13-promise-race', async () => {
-    expect((await p(execFile)('node', ['src/13-promise-race.js'])).stdout.trim()).to.equal('undefined 3.4906')
+    expect((await p(execFile)('node', ['src/13-promise-race.js'])).stdout.trim()).to.equal('undefined 3.495')
+  })
+
+  it('14-promise-then', async () => {
+    expect((await p(execFile)('node', ['src/14-promise-then.js'])).stdout.trim()).to.equal('0.9999894')
+  })
+
+  it('15-promise-catch', async () => {
+    expect((await p(execFile)('node', ['src/15-promise-catch.js'])).stdout.trim()).to.equal('problem!')
   })
 })

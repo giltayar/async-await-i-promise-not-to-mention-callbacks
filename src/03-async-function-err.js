@@ -12,7 +12,7 @@ async function fetchDollarRate (date, symbol) {
 
 async function main () {
   try {
-    console.log(await fetchDollarRate('2017-12-22', 'ILS'))
+    console.log(await fetchDollarRate('2017-12-20', 'ILS'))
   } catch (err) {
     console.error('Error, aborting...', err.stack || err)
     process.exit(1)

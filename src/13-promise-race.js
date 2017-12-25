@@ -11,8 +11,8 @@ async function fetchDollarRate (date, symbol) {
 }
 
 async function main () {
-  const rate1 = await Promise.race([fetchDollarRate('2017-12-22', 'ILS'), delay(50)])
-  const rate2 = await Promise.race([fetchDollarRate('2017-12-22', 'ILS'), delay(5000)])
+  const rate1 = await Promise.race([fetchDollarRate('2017-12-20', 'ILS'), delay(50)])
+  const rate2 = await Promise.race([fetchDollarRate('2017-12-20', 'ILS'), delay(5000)])
 
   console.log(rate1, rate2)
 }

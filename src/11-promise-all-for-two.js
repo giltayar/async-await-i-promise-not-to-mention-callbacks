@@ -12,8 +12,8 @@ async function fetchDollarRate (date, symbol) {
 
 async function main () {
   const [ilsRate, eurRate] = await Promise.all([
-    fetchDollarRate('2017-12-22', 'ILS'),
-    fetchDollarRate('2017-12-22', 'EUR')
+    fetchDollarRate('2017-12-20', 'ILS'),
+    fetchDollarRate('2017-12-20', 'EUR')
   ])
 
   console.log(ilsRate, eurRate)
